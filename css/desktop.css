@@ -51,7 +51,7 @@ header {
 }
 
 header.active {
-    background: rgba(0, 0, 0);
+    background: rgba(16, 16, 16);
     border-bottom: 2px solid var(--primary-color) ;
     transition: 0.6s;
 }
@@ -100,7 +100,10 @@ header .logo {
 }
 
 #navigation li:hover {
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid var(--primary-color);
+}
+header.active #navigation li:hover {
+    border-bottom: 2px solid rgb(16,16,16);
 }
 
 .banner {
