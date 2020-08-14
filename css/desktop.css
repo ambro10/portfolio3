@@ -832,3 +832,15 @@ footer {
     opacity: 0;
     transition: opacity 0.75s ease-in-out;
   }
+
+
+
+  [data-scroll] {
+    transition: opacity 1.5s;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+  }

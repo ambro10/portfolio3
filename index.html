@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio Sebastian Ambrochowicz</title>
     
+    
     <link rel="stylesheet" type="text/css" href="css\desktop.css">
     <link rel="stylesheet" type="text/css" href="css\mobile.css">
     <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
@@ -18,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
 </head>
 <body>
@@ -38,8 +40,8 @@
         </header>
                     
                     <div class="content">
-                        <h2 id="hello"> <span>Sebastian Ambrochowicz</span></h2>
-                        <p id="whoami"> Junior frontend and Python developer, <br/> Licencjonowany operator statków bezzałogowych
+                        <h2 id="hello" class="animate__animated animate__bounceInDown"> <span>Sebastian Ambrochowicz</span></h2>
+                        <p id="whoami" class="animate__animated animate__bounceInLeft"> Junior frontend and Python developer, <br/> Licencjonowany operator statków bezzałogowych
                         </p>
                         <a href="CV_Sebastian_Ambrochowicz.pdf" download id="km">Pobierz CV</a>
                     </div>
@@ -67,14 +69,14 @@
 </section>
 </div>
     <div class="home" id="home">
-        <h1 id="welcome-title">Miło mi Cię gościć na mojej stronie!</h1>
-    <div class="main-description">
+        <h1 id="welcome-title" >Miło mi Cię gościć na mojej stronie!</h1>
+    <div class="main-description" data-scroll>
             <h2 id="htext1">KILKA SŁÓW O MNIE</h2>
             <h5 id="htext2">KIM JESTEM I CO ROBIĘ</h5>
             <p>|</p>
             <p>|</p>
             <p>|</p>
-            <p id="htext3">Obecnie jestem studentem I roku Inżynierii zasobów informacyjnych. 
+            <p id="htext3" data-scroll>Obecnie jestem studentem I roku Inżynierii zasobów informacyjnych. 
                  <br/> Projektowanie stron, programowanie i ujęcia z drona to moje pasje i sposób na życie. 
                  <br/> Jeżeli zależy Ci na spójnych i miłych dla oczu projektach, to dobrze trafiłeś! <br/> 
                  Z przyjemnością przygotuję i prześlę wycenę.</p>
@@ -85,7 +87,7 @@
         <div class="inner-width">
             <h1 class="section-title" id="serv-title">< <span style="color:orange">USŁUGI</span>/><div class="border"></div></h1>
             <div class="services-container">
-                <div class="service-box">
+                <div class="service-box" data-scroll>
                     <div class="service-title" id="serv1"><span>Tworzenie stron</span></div>
                     <div class="service-desc" id="serv1t">
                         Najbardziej cenię sobie przejrzystość i funkcjonalność,
@@ -96,7 +98,7 @@
                 </div>
                 
 
-                <div class="service-box b2">
+                <div class="service-box b2" data-scroll>
                     <div class="service-title" id="serv2">ZARZĄDZANIE STRONĄ</div>
                     <div class="service-desc" id="serv2t">
                         Chętnie też podejmę się prowadzenia lub modyfikacji
@@ -104,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="service-box b3">
+                <div class="service-box b3" data-scroll>
                     <div class="service-title" id="serv3">FILMOWANIE I FOTOGRAFOWANIE Z DRONA</div>
                     <div class="service-desc" id="serv3t">
                         Od 2018 roku jestem licencjonowanym operatorem statków bezzałogowych, 
@@ -116,7 +118,7 @@
                     </div>
                 </div>
 
-                <div class="service-box b4">
+                <div class="service-box b4" data-scroll>
                     <div class="service-title" id="serv4">Data Science</div>
                     <div class="service-desc" id="serv4t">
                         Jest to specjalizacja, którą postanowiłem wybrać na studiach ze względu na moje zaciekawienie językiem jakim jest Python. 
@@ -255,12 +257,6 @@
         <div class="footer-text">©2020 by Sebastian Ambrochowicz</div>
     </footer>
     
-    <script type="text/javascript">
-        window.addEventListener("scroll", function() {
-            var header = document.querySelector("header");
-            header.classList.toggle("active", window.scrollY > 0);
-        });
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/javascript.js"></script>
     <script src="js/parralax.js"></script>
@@ -268,6 +264,17 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
     <script src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js'></script>
-    
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("active", window.scrollY > 0);
+        });
+        ScrollOut({
+            onShown(el) {
+                el.classList.add("animated");
+            }   
+        });
+    </script>
 </body>
 </html>
